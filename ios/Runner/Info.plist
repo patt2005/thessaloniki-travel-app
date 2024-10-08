@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs access to your photo library to allow you to select a photo as your avatar or upload images for your profile.</string>
 	<key>CFBundleDisplayName</key>
 	<string>Thessaloniki Travel App</string>
 	<key>CFBundleExecutable</key>
