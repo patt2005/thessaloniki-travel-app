@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thessaloniki_travel_app/pages/home_page.dart';
+import 'package:thessaloniki_travel_app/pages/maps_page.dart';
 import 'package:thessaloniki_travel_app/pages/settings_page.dart';
 import 'package:thessaloniki_travel_app/utils/utils.dart';
 
@@ -46,7 +47,7 @@ class _NavBarPageState extends State<NavBarPage> {
           case 1:
             return CupertinoTabView(
               builder: (BuildContext context) {
-                return const HomePage();
+                return const MapsPage();
               },
             );
           case 2:
