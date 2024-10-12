@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thessaloniki_travel_app/pages/home_page.dart';
-import 'package:thessaloniki_travel_app/pages/maps_page.dart';
 import 'package:thessaloniki_travel_app/pages/settings_page.dart';
+import 'package:thessaloniki_travel_app/pages/tour_list_page.dart';
+import 'package:thessaloniki_travel_app/pages/trip_list_page.dart';
 import 'package:thessaloniki_travel_app/utils/utils.dart';
 
 class NavBarPage extends StatefulWidget {
@@ -28,7 +29,11 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.map),
-            label: 'Maps',
+            label: 'Trips',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.bag),
+            label: 'Tours',
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.profile_circled),
@@ -47,10 +52,16 @@ class _NavBarPageState extends State<NavBarPage> {
           case 1:
             return CupertinoTabView(
               builder: (BuildContext context) {
-                return const MapsPage();
+                return const TripListPage();
               },
             );
           case 2:
+            return CupertinoTabView(
+              builder: (BuildContext context) {
+                return const TourListPage();
+              },
+            );
+          case 3:
             return CupertinoTabView(
               builder: (BuildContext context) {
                 return const SettingsPage();
